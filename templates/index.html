@@ -1,0 +1,75 @@
+{% load static %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static '/css/base64.css' %}">
+
+    <title>Encoder | Base64</title>
+  </head>
+  <body>
+    <div class="transition">
+      <header id="header-container">
+        <div id="logo-box" class="d-flex flex-row">
+          <img id="logo-icon" src="https://drive.google.com/uc?export=view&id=1t8YB8YltF3TqNBEGVAk5rOmGL8AEr5MF" alt"logo-icon" />
+          <b id="logo-text" class="d-flex flex-reverse-row text-center">Base64</b>
+        </div>
+          <nav class="custom-nav custom-nav-sm visible-nav">
+            <ul class="nav custom-ul custom-ul-sm">
+              <li class="nav-item custom-li "><a class="nav-link custom-a active" href="#">Encoder</a></li>
+              <li class="nav-item custom-li"><a class="nav-link custom-a" href="#">Decoder</a></li>
+              <li class="nav-item custom-li"><a class="nav-link custom-a" href="#">About</a></li>
+            </ul>
+          </nav>
+      </header>
+      <nav class="custom-nav custom-nav-sm hidden-nav">
+        <ul class="nav custom-ul custom-ul-sm">
+          <li class="nav-item custom-li "><a class="nav-link custom-a active" href="#">Encoder</a></li>
+          <li class="nav-item custom-li"><a class="nav-link custom-a" href="#">Decoder</a></li>
+          <li class="nav-item custom-li"><a class="nav-link custom-a" href="#">About</a></li>
+        </ul>
+      </nav>
+      
+      <section id="file-upload-section" class="file-upload-box">
+          <div id="file-container-1">
+            <text class="info-text">
+              <tspan>Convert  Any  File<br>To <a>Base64</a></tspan>
+            </text>
+            
+            <div class="file-field">
+              <form id="upload-file" action="upload.php" method="POST">
+                  <input id="input-box" for="upload-file-field" type="text" placeholder="Drag & Drop File">
+                  <input type="file" id="upload-file-field" multiple>
+                  <input id="file-button" type="button" value="OR CLICK HERE">
+                  <input class="glyphicon glyphicon-asterisk" type="reset" id="reset-btn" style="display:none;" value="">
+              </form>
+              <button id="resetter" data-toggle="tooltip" data-placement="right" title="refresh"><i class="fa fa-refresh" aria-hidden="true"></i></button>
+              <div id="btn-container">
+                <button type="button" id="upload-button" class="converter btn-property btn-success"><i class="fa fa-cloud-upload upload-icon" aria-hidden="true"></i>
+<span>Convert<span></button>
+              <div id="progress-div">
+                <div id="custom-propbar" class="progress">
+                  <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+                </div><label id="progress-detail"><b>50%</b></label>
+                <button id="remove" alt="delete" data-toggle="tooltip" data-placement="bottom" title="remove"><i class="fa fa-times" aria-hidden="true"></i></button>
+              </div>
+              </div>
+            </div>
+          </div>
+<!--           <div id="file-container-2">
+            <text class="info-text">
+              <tspan>Convert  Any  File<br>To <a>Base64</a></tspan>
+            </text>
+          </div> -->
+      </section>
+   
+    </div>
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="{% static '/js/base64.js' %}"></script>
+<script src="https://use.fontawesome.com/ede65061f2.js"></script>
+
+    </body>
+</html>
